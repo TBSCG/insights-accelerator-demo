@@ -1,0 +1,2 @@
+class: info.magnolia.rest.EndpointDefinition
+implementationClass: org.tbscg.visitor.rest.VisitorEndpoint

@@ -1,0 +1,26 @@
+!inherit:mtk2:pages/basic
+form:
+  properties:
+    searchResultPage:
+      $type: linkField
+  layout:
+    $type: tabbedLayout
+    tabs: !override
+      tabMain:
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: hideInNav
+          - name: windowTitle
+          - name: abstract
+      tabMeta:
+        fields:
+          - name: keywords
+          - name: description
+          - name: noCache
+      tabSearch:
+        fields:
+          - name: searchResultPage
+      personalization: !override
+        fields:
+          - name: useAITagging

@@ -1,0 +1,51 @@
+$type: comboBoxField
+label: ''
+description: "For operators with 'one of' use comma separated values, i.e.: 0,2,4,6,8"
+datasource:
+  $type: optionListDatasource
+  options:
+    equal:
+      label: Equal (case sensitive)
+      value: equal
+    equal_insensitive:
+      label: Equal (case insensitive)
+      value: equal_insensitive
+    equal_one_of:
+      label: Equal "one of" (case sensitive)
+      value: equal_one_of
+    less_equal:
+      label: Less than or equal
+      value: less_equal
+    greater_equal:
+      label: Greater than or equal
+      value: greater_equal
+    less:
+      label: Less
+      value: less
+    greater:
+      label: Greater than
+      value: greater
+    contains:
+      label: Contains (case sensitive)
+      value: contains
+    contains_insensitive:
+      label: Contains (case insensitive)
+      value: contains_insensitive
+    contains_one_of:
+      label: Contains "one of" (case insensitive)
+      value: contains_one_of
+    not:
+      label: Not equal (case sensitive)
+      value: not
+    not_insensitive:
+      label: Not equal (case insensitive)
+      value: not_insensitive
+    not_one_of:
+      label: Not "one of" (case sensitive)
+      value: not_one_of
+    top_x:
+      label: Top X (case insensitive)
+      value: top_x
+    top_x_contains:
+      label: Top X (part match + case insensitive)
+      value: top_x_contains

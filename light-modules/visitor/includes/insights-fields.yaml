@@ -1,0 +1,27 @@
+excludeRecentlyViewed:
+  $type: checkBoxField
+topics:
+  $type: jcrMultiField
+  field:
+    $type: compositeField
+    label: ""
+    properties:
+      mgnl:tags:
+        class: info.magnolia.contenttags.ui.field.TagsFieldDefinition
+      weight:
+        $type: sliderField
+        min: 0
+        max: 100
+        defaultValue: 10
+      decay:
+        $type: sliderField
+        min: 0
+        max: 5
+        defaultValue: 1
+      repeat:
+        $type: sliderField
+        min: 0
+        max: 100
+        defaultValue: 1
+useAITagging:
+  $type: checkBoxField

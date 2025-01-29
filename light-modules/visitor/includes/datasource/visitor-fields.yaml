@@ -1,0 +1,24 @@
+$type: comboBoxField
+label: ''
+description: ""
+datasource:
+  $type: optionListDatasource
+  options:
+    id:
+      label: ID
+      value: visitorId
+    favorites:
+      label: Favorites
+      value: favorites
+    recentlyViewed:
+      label: Recently viewed
+      value: recentlyViewed
+    lastLogin:
+      label: Last login
+      value: lastLogin
+    daysSinceLastLogin:
+      label: Days since last login
+      value: daysSinceLastLogin
+    interests:
+      label: Interests
+      value: interests

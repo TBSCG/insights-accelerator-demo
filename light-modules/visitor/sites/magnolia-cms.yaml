@@ -1,0 +1,21 @@
+templates:
+  class: info.magnolia.module.site.templates.ReferencingPrototypeTemplateSettings
+  prototypeId: travel-demo:pages/prototype
+  availability:
+    templates:
+      home:
+        id: travel-demo:pages/home
+      standard:
+        id: travel-demo:pages/standard
+      searchResultPage:
+        id: travel-demo:pages/searchResultPage
+      pur:
+        id: travel-demo:pages/pur
+    enableAllWithRenderType:
+      freemarker: freemarker
+      spa: spa
+mappings:
+  website:
+    URIPrefix: ''
+    handlePrefix: /magnolia-cms
+    repository: website

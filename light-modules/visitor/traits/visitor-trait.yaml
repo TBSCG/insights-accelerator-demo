@@ -1,0 +1,26 @@
+traitClass: java.lang.String
+converterClass: org.tbscg.visitor.trait.VisitorParameterConverter
+voterClass: org.tbscg.visitor.trait.VisitorVoter
+defaultPreviewTrait: false
+$type: requestParameterTrait
+
+ruleField: &fieldDefinition
+  $type: compositeField
+  label: EVisitor
+  properties:
+    key:
+      !include:/visitor/includes/datasource/visitor-fields.yaml
+    operator:
+      !include:/visitor/includes/datasource/trait-operators.yaml
+    value:
+      $type: textField
+      label: ''
+  layout:
+    $type: horizontal
+    spacing: false
+
+valueField:
+  #  name: complexFieldTrait
+  name: value
+  $type: textField
+  placeholder: key|operator|value

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="generator" content="HTML Tidy for HTML5 for Windows version 5.6.0">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.css" rel="stylesheet">
+<link href="https://cdn.datatables.net/v/ju/jq-3.7.0/jszip-3.10.1/dt-2.0.6/af-2.7.0/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/cr-2.0.1/date-1.5.2/fc-5.0.0/fh-4.0.1/kt-2.12.0/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.2/sb-1.7.1/sp-2.3.1/sl-2.0.1/sr-1.4.1/datatables.min.css" rel="stylesheet">
+<link href="css/jquery-ui.theme.css" rel="stylesheet">
+<link rel="stylesheet" href="css/reporting.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/v/ju/jq-3.7.0/jszip-3.10.1/dt-2.0.6/af-2.7.0/b-3.0.2/b-colvis-3.0.2/b-html5-3.0.2/b-print-3.0.2/cr-2.0.1/date-1.5.2/fc-5.0.0/fh-4.0.1/kt-2.12.0/r-3.0.2/rg-1.5.0/rr-1.5.0/sc-2.4.2/sb-1.7.1/sp-2.3.1/sl-2.0.1/sr-1.4.1/datatables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js" integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/visitors.js"></script>
+<script src="js/includes/tagcloud.js"></script>
+<style>
+            #tabs {
+                height: 95%;
+                float: left;
+            }
+
+            .datablock{
+                border: 1px solid #ccc;
+                float: left;
+                width: 45vw;
+            }
+
+            .right {
+                float: right;
+            }
+
+            .mainPanel {
+                min-height: 80%;
+            }
+
+            canvas {
+                padding-left: 0;
+                padding-right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+            }
+
+            h2 {
+                text-align: center;
+            }
+
+            #visitorDisplayToggle {
+                float: right;
+            }
+
+            #visitorCount {
+                display: none;
+            }
+
+            #interestsOverview_wrapper {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .count-panel {
+                text-align: center;
+            }
+
+            .count-panel > div {
+                font-size: 64px;
+            }
+
+            .count-panel > span {
+                font-style: italic;
+            }
+</style>
+<title></title>
+</head>
+<body>
+<div class="container">
+<div id="tabs">
+    <ul>
+    <li><a href="#tabs-1">Overview</a></li>
+    <li><a href="#tabs-2">Individual</a></li>
+    </ul>
+    <div id="tabs-1" style="height: 95%">
+        <div>
+            <div class="datablock">
+                <div class="count-panel">
+                    <div id="siteCountPanel"></div>
+                    <span>sites being tracked</span>
+                </div>
+            </div>
+            <div class="datablock right">
+                <div class="count-panel">
+                    <div id="visitorCountPanel"></div>
+                    <span>visitors being tracked (<span id="uniqueVisitorCount"></span> unique ids)</span>
+                </div>
+            </div>
+        </div>
+        <div>
+<div class="datablock mainPanel">
+<h2>Top Interests</h2>
+<table id="interestsOverview" class="display" style="width:100%">
+<thead>
+<tr>
+<th>Interest</th>
+<th>Weight</th>
+</tr>
+</thead>
+</table>
+</div>
+<div class="datablock mainPanel right">
+<div id="visitorDisplayToggle"><label for="interestCount">display by #visitor</label> <input type="checkbox" name="interestCount" id="interestCount"></div>
+<div id="visitorWeight">
+<h2>Interests by Weight</h2>
+<canvas id="interestsWeight" style="width:700px;height: 700px;"></canvas>
+</div>
+<div id="visitorCount">
+<h2>Interests by visitor count</h2>
+<canvas id="interestsVisitors" style="width:700px;height: 700px;"></canvas>
+</div>
+</div>
+</div>
+</div>
+<div id="tabs-2" style="height: 95%">
+<div>
+<form action="#">
+<fieldset><label for="userID">User ID</label> <select name="userID" id="userID">
+<option>Loading...</option>
+</select> <label for="site">Site</label> <select name="site" id="site">
+<option>Loading...</option>
+</select> <input id="removeSite" type="button" value="Remove"></fieldset>
+</form>
+</div>
+<div id="dataContainer">
+<div><button id="describeTheUser">Describe</button>
+<div id="userDescription"></div>
+</div>
+<div id="interestsTable" style="float:left; width: 50%;">
+<table id="interests" class="display" style="width:100%">
+<thead>
+<tr>
+<th>Interest</th>
+<th>Decay rate</th>
+<th>Weight</th>
+</tr>
+</thead>
+</table>
+</div>
+<div id='tagCloudHolder' style='float: left; top:0px;left: 0px; width:50%;height:400px'>
+<div id='tagCloud' style='margin-top: 5%'></div>
+</div>
+<div id="recentlyViewedTable" style="float:left; width: 100%;">
+<table id="recentlyViewed" class="display" style="width:100%">
+<thead>
+<tr>
+<th>Recent view</th>
+<th>Date</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

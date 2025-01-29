@@ -1,0 +1,14 @@
+magnolia.license.owner=
+magnolia.license.key=
+workspace.home=
+database.visitor.jdbcurl=jdbc:postgresql://localhost/visitor?ssl=false;
+database.visitor.username=magnolia
+database.visitor.password=PUT_YOUR_PASSWORD_HERE
+database.visitor.init=postgres
+database.simple_store.jdbcurl=jdbc:postgresql://localhost/simple_store?ssl=false;
+database.simple_store.username=magnolia
+database.simple_store.password=PUT_YOUR_PASSWORD_HERE
+database.simple_store.init=postgres
+cookie.check=true
+cookie.name=cookieconsent_status
+cookie.values=allow, allowall, dismiss

@@ -1,0 +1,19 @@
+name: evisitor-detail
+icon: insights-accelerator-icon
+class: info.magnolia.ui.api.app.registry.ConfiguredAppDescriptor
+appClass: info.magnolia.ui.framework.app.BaseApp
+label: Insights Accelerator
+subApps:
+  overview:
+    class: info.magnolia.ui.javascript.app.JavascriptSubAppDescriptor
+    label: Overview
+    fieldScript: /visitor/webresources/insights/index.html
+    parameters:
+      tab: overview
+  individual:
+    class: info.magnolia.ui.javascript.app.JavascriptSubAppDescriptor
+    label: Individual
+    fieldScript: /visitor/webresources/insights/index.html#individual
+    closable: false
+    parameters:
+      tab: individual

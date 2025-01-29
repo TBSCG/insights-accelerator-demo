@@ -1,0 +1,5 @@
+magnolia:
+  publishing:
+    receivers:
+      - name: magnoliaPublic
+        url: http://localhost:8090/magnoliaPublic

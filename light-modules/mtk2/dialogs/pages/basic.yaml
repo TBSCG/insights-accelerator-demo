@@ -1,0 +1,47 @@
+form:
+  properties:
+    !include:/visitor/includes/insights-fields.yaml
+    title:
+      $type: textField
+      i18n: true
+    navigationTitle:
+      $type: textField
+      i18n: true
+    hideInNav:
+      $type: checkBoxField
+    windowTitle:
+      $type: textField
+      i18n: true
+    abstract:
+      $type: textField
+      rows: 5
+      i18n: true
+    keywords:
+      $type: textField
+      rows: 3
+      i18n: true
+    description:
+      $type: textField
+      rows: 5
+      i18n: true
+    noCache:
+      $type: checkBoxField
+  layout:
+    $type: tabbedLayout
+    tabs:
+      - name: tabMain
+        fields:
+          - name: title
+          - name: navigationTitle
+          - name: hideInNav
+          - name: windowTitle
+          - name: abstract
+      - name: tabMeta
+        fields:
+          - name: keywords
+          - name: description
+          - name: noCache
+      - name: Personalization
+        fields:
+          - name: excludeRecentlyViewed
+          - name: topics

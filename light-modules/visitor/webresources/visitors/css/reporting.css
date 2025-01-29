@@ -1,0 +1,225 @@
+body {
+  font: 300 14px/1.6 Roboto, sans-serif;
+}
+
+.heading-title {
+  font-size: 45px;
+  letter-spacing: -2.7px;
+  line-height: 55px;
+  margin-right: 50px;
+  font-weight: 300;
+  color: #474747;
+}
+
+#previous, #next, #finish, #new {
+  background-color: #599900;
+  color: white;
+  padding: 10px 20px;
+  margin: 20px 20px 0 0;
+  border: none;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 25px;
+  color: #fff;
+  line-height: normal;
+  font-size: 14px;
+  font-weight: normal;
+  letter-spacing: -0.3px;
+  height: 45px;
+  font-size: 14px;
+  min-width: 100px;
+}
+
+h2 {
+  letter-spacing: -0.5px;
+  margin-right: 50px;
+  font-weight: 300;
+  color: #474747;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+img {
+  height: 100px;
+}
+
+p {
+  color: red;
+  font-weight: bold;
+}
+
+table.dataTable tr th {
+  background: #f5f5f5;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+table.dataTable th.dt-type-numeric, table.dataTable td.dt-type-numeric {
+  text-align: center;
+}
+
+.container {
+  padding: 20px 20px;
+}
+
+@media (min-width: 768px) {
+  .flex-row {
+    display:flex
+  }
+}
+
+.flex-row>.flex-col-sm {
+  padding-left: 15px;
+  padding-right: 15px
+}
+
+@media (min-width: 768px) {
+  .flex-row>.flex-col-sm {
+    flex-grow:1;
+    flex-shrink: 1;
+    flex-basis: 0
+  }
+
+  .flex-row>.flex-col-sm>article {
+    height: calc(100% - 20px)
+  }
+
+  .flex-row>.flex-col-sm:nth-last-child(1):first-child>article {
+    height: auto
+  }
+}
+
+.form {
+  display: flex;
+  margin-bottom: 20px;
+  width: 40%;
+}
+
+table.dataTable {
+  width: 100%;
+}
+
+.row {
+  display:inline-block;
+  width: 100%;
+  vertical-align:top;
+}
+
+.modal {
+  display:    none;
+  position:   fixed;
+  align-items: center;
+  z-index:    1000;
+  top:        0;
+  left:       0;
+  height:     100%;
+  width:      100%;
+  background: rgba( 255, 255, 255, .6 );
+}
+
+/* When the body has the loading class, we turn
+   the scrollbar off with overflow:hidden */
+body.loading .modal {
+  overflow: hidden;
+}
+
+/* Anytime the body has the loading class, our
+   modal element will be visible */
+body.loading .modal {
+  display: flex;
+}
+
+
+.lds-roller,
+.lds-roller div,
+.lds-roller div:after {
+  box-sizing: border-box;
+}
+.lds-roller {
+  display: flex;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+}
+.lds-roller div {
+  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  transform-origin: 40px 40px;
+}
+.lds-roller div:after {
+  content: " ";
+  display: block;
+  position: absolute;
+  width: 7.2px;
+  height: 7.2px;
+  border-radius: 50%;
+  background: currentColor;
+  margin: -3.6px 0 0 -3.6px;
+}
+.lds-roller div:nth-child(1) {
+  animation-delay: -0.036s;
+}
+.lds-roller div:nth-child(1):after {
+  top: 62.62742px;
+  left: 62.62742px;
+}
+.lds-roller div:nth-child(2) {
+  animation-delay: -0.072s;
+}
+.lds-roller div:nth-child(2):after {
+  top: 67.71281px;
+  left: 56px;
+}
+.lds-roller div:nth-child(3) {
+  animation-delay: -0.108s;
+}
+.lds-roller div:nth-child(3):after {
+  top: 70.90963px;
+  left: 48.28221px;
+}
+.lds-roller div:nth-child(4) {
+  animation-delay: -0.144s;
+}
+.lds-roller div:nth-child(4):after {
+  top: 72px;
+  left: 40px;
+}
+.lds-roller div:nth-child(5) {
+  animation-delay: -0.18s;
+}
+.lds-roller div:nth-child(5):after {
+  top: 70.90963px;
+  left: 31.71779px;
+}
+.lds-roller div:nth-child(6) {
+  animation-delay: -0.216s;
+}
+.lds-roller div:nth-child(6):after {
+  top: 67.71281px;
+  left: 24px;
+}
+.lds-roller div:nth-child(7) {
+  animation-delay: -0.252s;
+}
+.lds-roller div:nth-child(7):after {
+  top: 62.62742px;
+  left: 17.37258px;
+}
+.lds-roller div:nth-child(8) {
+  animation-delay: -0.288s;
+}
+.lds-roller div:nth-child(8):after {
+  top: 56px;
+  left: 12.28719px;
+}
+@keyframes lds-roller {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
