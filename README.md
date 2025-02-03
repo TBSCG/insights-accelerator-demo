@@ -1,2 +1,2 @@
-# travel-demo-template
+# insight-accelerator-demo
 Customer Template
