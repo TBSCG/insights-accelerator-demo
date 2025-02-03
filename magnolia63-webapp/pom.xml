@@ -15,6 +15,14 @@
         <travel.site.version>6.3.0</travel.site.version>
         <cargo.maven3.plugin.version>1.10.14</cargo.maven3.plugin.version>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>github-packages</id>
+            <url>https://maven.pkg.github.com/TBSCG/magnolia-packages</url>
+        </repository>
+    </repositories>
+
     <dependencies>
         <!--
          Add your project specific dependencies here:
@@ -150,8 +158,8 @@
         <!-- Insight accelerator -->
         <dependency>
             <groupId>org.tbscg</groupId>
-            <artifactId>dev-insights-accelerator</artifactId>
-            <version>6.3.3</version>
+            <artifactId>insights-accelerator</artifactId>
+            <version>6.3.4-SNAPSHOT</version>
         </dependency>
     </dependencies>
 
@@ -176,7 +184,9 @@
                                 <containerId>tomcat9x</containerId>
                                 <zipUrlInstaller>
                                     <!--<url>https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.zip</url>-->
-                                    <url>https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.zip</url>
+                                    <url>
+                                        https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.97/bin/apache-tomcat-9.0.97.zip
+                                    </url>
                                     <downloadDir>${workspace.home}/magnolia63-webapp/target/downloads</downloadDir>
                                     <extractDir>${workspace.home}/magnolia63-webapp/target/extracts</extractDir>
                                 </zipUrlInstaller>
@@ -249,7 +259,9 @@
                                 </systemProperties>
                                 <containerId>tomcat9x</containerId>
                                 <zipUrlInstaller>
-                                    <url>https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.zip</url>
+                                    <url>
+                                        https://archive.apache.org/dist/tomcat/tomcat-9/v9.0.98/bin/apache-tomcat-9.0.98.zip
+                                    </url>
                                     <downloadDir>${workspace.home}/magnolia63-webapp/target/downloads</downloadDir>
                                     <extractDir>${workspace.home}/magnolia63-webapp/target/extracts</extractDir>
                                 </zipUrlInstaller>
