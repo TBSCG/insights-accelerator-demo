@@ -11,7 +11,7 @@ The **Insight Accelerator Demo** provides a step-by-step guide for setting up an
 
 ### Steps to enable AI AutoTagging:
 
-1. Open **Magnolia Central Page** and navigate to the **Pages App**.
+1. Open **Magnolia Admincentral** and navigate to the **Pages App**.
 2. Click on the **Travel Page** checkbox or select the **Travel Main Folder Column**.
 3. In the right **Selection Panel**, click on **Edit Page Properties**.
 4. Go to the **Personalization** tab.
@@ -25,14 +25,14 @@ The **Insight Accelerator Demo** provides a step-by-step guide for setting up an
 
 ### Steps to manually tag content:
 
-1. Open **Magnolia Central Page** and navigate to the **Tours App**.
+1. Open **Magnolia Admincentral** and navigate to the **Tours App**.
 2. Click on the **magnolia-travels** folder.
 3. Existing tags will be visible under the **Tags Column** in the table.
 4. To add a new tag:
     - Click on one of the travel locations or names.
     - Scroll to the bottom of the page where **Tags** are listed.
     - Click on the row to manually add a new tag.
-    - Once completed the content need to be published by clicking the publish button on the right hand Panel 
+    - Once completed the content needs to be published by clicking the publish button on the right hand panel 
 💡 **Tip:** Ensure tags are relevant for better content categorization.
 
 ---
@@ -59,7 +59,7 @@ Magnolia allows visitor traits to be used in personalization. A key trait is **i
 
 | Condition       | Description |
 |----------------|-------------|
-| `top_x`        | Selects the top X interests by weight. |
+| `top_x`        | Select the top X interests by weight. |
 | `top_x_contains` | Checks if a specific interest is within the top X interests. |
 
 ##### Example: Personalizing Content Based on Interests
@@ -85,13 +85,13 @@ Magnolia’s personalization feature allows content to be dynamically adjusted b
 
 ## 📊 Record Visit - Functionality Overview
 
-The **Record Visit** feature is designed to track user interactions with the website, helping analyze visitor behavior
+The **Record Visit** feature tracks user interactions with the website, helping analyze visitor behavior
 and preferences. Below are the key aspects of how this functionality works.
 
 1. Page Visit Tracking
     - The system monitors the pages users visit using a tracking script (getTrackJS) that dynamically generates tracking
       URLs.
-    - It determines the type of page the user is viewing—whether it's a tour page, a tour category, or another section
+    - It determines the type of page the user views—whether it's a tour page, a tour category, or another section
       of the site.
     - Based on the page type, it logs relevant tracking information to capture user interest.
 
@@ -135,7 +135,7 @@ For example:
 
 ### Steps to configure the Cookie Banner:
 
-1. Open **Magnolia Central Page** and navigate to the **Pages App**.
+1. Open **Magnolia Admincentral** and navigate to the **Pages App**.
 2. Click on the **Travel Page** checkbox or select the **Travel Main Folder Column**.
 3. In the right **Selection Panel**, click on **Edit Page Properties**.
 4. Navigate to the **Cookie Consent** tab.
@@ -143,7 +143,7 @@ For example:
 6. Fill in all required fields accordingly and add an **internal/external link**.
 7. Move to the **Cookie Consent** customization tab.
 8. Configure the **position**, **style**, **color**, and **button settings** of the banner.
-9. Once completed the content need to be published by clicking the publish button on the right hand Panel
+9. Once completed the content needs to be published by clicking the publish button on the right hand panel
 
 ---
 
@@ -151,7 +151,7 @@ For example:
 
 ### Steps to generate tracked visits to the public environment:
 
-1. Open **Magnolia Central Page** and navigate to the **Insight Accelerator App**.
+1. Open **Magnolia Admincentral** and navigate to the **Insight Accelerator App**.
 2. Click on the **Individual Tab**.
 3. Find your **Visitor ID** from the Left Panel
 4. Fill in all required fields accordingly.
