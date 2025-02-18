@@ -32,7 +32,7 @@ The **Insight Accelerator Demo** provides a step-by-step guide for setting up an
     - Click on one of the travel locations or names.
     - Scroll to the bottom of the page where **Tags** are listed.
     - Click on the row to manually add a new tag.
-    - Once completed the content needs to be published by clicking the publish button on the right hand panel 
+    - Once completed the content needs to be published by clicking the publish button on the right-hand panel 
 💡 **Tip:** Ensure tags are relevant for better content categorization.
 
 ---
@@ -143,7 +143,41 @@ For example:
 6. Fill in all required fields accordingly and add an **internal/external link**.
 7. Move to the **Cookie Consent** customization tab.
 8. Configure the **position**, **style**, **color**, and **button settings** of the banner.
-9. Once completed the content needs to be published by clicking the publish button on the right hand panel
+9. Once completed the content needs to be published by clicking the publish button on the right-hand panel
+
+---
+
+## 📘 Stitching
+
+### Overview 
+
+The RegistrationProcessor class is from Magnolia's Public User Registration module. It processes user registration forms, integrates with a ProfileIdentificationService, and ensures user profile creation and updates.
+
+### Functionality
+
+The RegistrationProcessor ensures that user profiles are created or updated during registration. It retrieves user information from the Magnolia context and fetches the current profile ID using ProfileIdentificationService. Based on profile existence, it either assigns a UUID to a new profile or saves a registered username to an existing profile.
+
+- Check if the profile is named:
+
+    - If not, check if the profile has a named identifier.
+
+    - If no named profile exists, assign a UUID to the username.
+
+- Otherwise, save the registered username.
+
+1. When the user goes to the page and does NOT ACCEPT cookies, every time a new session is created (e. g. new browser, restart browser) different user UUID is created by Magnolia.
+2. When the user goes to the page and ACCEPT cookies, his UUID is saved to the database "visitor" and cookie. Every time he visits a page from the same browser - the user UUID is the same data about interests is gathered and content is personalized
+3. When the user accepts cookies and registers, his anonymous UUID and user name are saved to the database "visitor" and table "profilesAssociation." This creates part of the association.
+4. When the user logs in from a browser that has fetched an anonymous UUID, he gets a named_id that is assigned to the anonymous UUID. Then, the full association is created.
+5. When the user logs in from a different browser or, different sessions to the same account, his two anonymous UUIDs are connected to a known profile.
+   Then personalized content is displayed from all connected anonymous profiles.
+   Example: User exploring sports travels from one browser and the other fetched browser user explores family travels, when logging in content from both will be displayed because profiles are associated.
+
+#### How to use this?
+
+The client must handle the registration process and save registered users (newsletter, registration, etc.) by his own.
+  
+The RegistrationProcessor class plays a crucial role in managing user registrations by linking user identities with system profiles, ensuring consistency and integration within Magnolia’s user management framework.
 
 ---
 
